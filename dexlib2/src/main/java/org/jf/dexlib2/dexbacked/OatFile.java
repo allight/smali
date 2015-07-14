@@ -187,6 +187,10 @@ public class OatFile extends BaseDexBuffer {
             super(opcodes, OatFile.this.buf, offset);
             this.filename = filename;
         }
+
+        @Override public boolean hasOdexOpcodes() {
+            return true;
+        }
     }
 
     private class OatHeader {
